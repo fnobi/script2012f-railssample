@@ -1,0 +1,1 @@
+rails generate scaffold Course name:string credit:integer programming:boolean

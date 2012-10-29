@@ -1,4 +1,6 @@
 Script2012fRailssample::Application.routes.draw do
+  resources :courses
+
   resources :students
 
   # The priority is based upon order of creation:
