@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @faculty.name %>
+</p>
+
+<p>
+  <b>Students:</b>
+  <ul>
+  <% @students.each do |student| %>
+    <li><%= student.name%> (grade: <%= student.grade%>)</li>
+  <% end %>
+  </ul>
+</p>
+

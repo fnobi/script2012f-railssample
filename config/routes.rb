@@ -1,4 +1,18 @@
+# -*- coding: utf-8 -*-
 Script2012fRailssample::Application.routes.draw do
+
+  # パラメータをqsで書くならこれでもよい。
+  # get "faculties/show"
+
+  # 上のを丁寧に書くとこう。
+  # match 'faculties/show' => 'faculties#show', :via => :get
+
+  # idを、/:idの形で指定して、showを呼べるようにする
+  match 'faculties/:id' => 'faculties#show'
+
+  # こういうのもあり。
+  # resources :faculties, :only => [ :show ]
+
   resources :courses
 
   resources :students
